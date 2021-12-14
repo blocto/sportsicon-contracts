@@ -1,0 +1,8 @@
+# System files
+.DS_Store
+.secret
+.deployed-mainnet
+
+# Built artifacts
+build/
+node_modules/

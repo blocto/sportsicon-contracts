@@ -1,0 +1,73 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"FungibleToken": {
+			"source": "./contracts/flow/FungibleToken.cdc",
+			"aliases": {
+				"emulator": "0xee82856bf20e2aa6",
+				"testnet": "0x9a0766d93b6608b7",
+				"mainnet": "0xf233dcee88fe0abe"
+			}
+		},
+		"IconsToken": {
+			"source": "./contracts/flow/IconsToken.cdc",
+			"aliases": {
+				"testnet": "0x85d301aec51787de"
+			}
+		},
+		"TeleportCustody": "./contracts/flow/TeleportCustody.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"keys": "a3fedbc0837fc67cac491f704508e82e590ac32eaad3ef7ec2cac492f5ce734a"
+		},
+		"icons-teleport-contract-testnet": {
+			"address": "dbbf409d954a92ab",
+			"keys": [
+				{
+					"type": "hex",
+					"index": 0,
+					"signatureAlgorithm": "ECDSA_secp256k1",
+					"hashAlgorithm": "SHA3_256",
+					"context": {
+						"privateKey": "757e0ed873419dcef9244a4c84ea2da3db4266855f61e98d1b503fd2a7f8fada"
+					}
+				}
+			],
+			"chain": "flow-testnet"
+		},
+		"icons-teleport-admin-testnet": {
+			"address": "3fd8f94084b09274",
+			"keys": [
+				{
+					"type": "hex",
+					"index": 0,
+					"signatureAlgorithm": "ECDSA_secp256k1",
+					"hashAlgorithm": "SHA3_256",
+					"context": {
+						"privateKey": "aad8634fe65cec8915ed77a12c9d14c8cfff08191f8353a4b2b348fcc49e2b40"
+					}
+				}
+			],
+			"chain": "flow-testnet"
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"icons-teleport-contract-testnet": [
+				"TeleportCustody"
+			]
+		}
+	}
+}
