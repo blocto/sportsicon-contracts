@@ -1,10 +1,10 @@
 {
-  "name": "sportsicon-contracts",
+  "name": "sportsicons-contracts",
   "version": "0.0.1",
   "description": "Cadence and Solidity contracts used in SportsIcon teleport",
   "repository": {
     "type": "git",
-    "url": "git://github.com/portto/sportsicon-contracts.git"
+    "url": "git://github.com/portto/sportsicons-contracts.git"
   },
   "author": "portto",
   "license": "MIT",
