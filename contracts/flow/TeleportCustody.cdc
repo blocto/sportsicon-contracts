@@ -95,7 +95,7 @@ pub contract TeleportCustody {
     // corresponding controller account on BSC
     pub var bscAdminAccount: [UInt8]
 
-    pub fun lock(from: @IconsToken.Vault, to: [UInt8])
+    pub fun teleportOut(from: @IconsToken.Vault, to: [UInt8])
 
     pub fun depositAllowance(from: @Allowance)
 
@@ -103,7 +103,7 @@ pub contract TeleportCustody {
   }
 
   pub resource interface TeleportControl {
-    pub fun unlock(amount: UFix64, from: [UInt8], hash: String): @FungibleToken.Vault
+    pub fun teleportIn(amount: UFix64, from: [UInt8], hash: String): @FungibleToken.Vault
 
     pub fun withdrawFee(amount: UFix64): @FungibleToken.Vault
     
@@ -136,12 +136,12 @@ pub contract TeleportCustody {
     // corresponding controller account on BSC
     pub var bscAdminAccount: [UInt8]
 
-    // unlock
+    // teleportIn
     //
     // Function that release IconsToken tokens from custody,
     // and returns them to the calling context.
     //
-    pub fun unlock(amount: UFix64, from: [UInt8], hash: String): @FungibleToken.Vault {
+    pub fun teleportIn(amount: UFix64, from: [UInt8], hash: String): @FungibleToken.Vault {
       pre {
         !TeleportCustody.isFrozen: "Teleport service is frozen"
         amount <= self.allowedAmount: "Amount teleported must be less than the allowed amount"
@@ -164,14 +164,14 @@ pub contract TeleportCustody {
       return <- vault
     }
 
-    // lock
+    // teleportOut
     //
     // Function that destroys a Vault instance, effectively burning the tokens.
     //
     // Note: the burned tokens are automatically subtracted from the 
     // total supply in the Vault destructor.
     //
-    pub fun lock(from: @IconsToken.Vault, to: [UInt8]) {
+    pub fun teleportOut(from: @IconsToken.Vault, to: [UInt8]) {
       pre {
         !TeleportCustody.isFrozen: "Teleport service is frozen"
         to.length == 20: "BSC address should be 20 bytes"

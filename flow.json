@@ -17,7 +17,7 @@
 		"IconsToken": {
 			"source": "./contracts/flow/IconsToken.cdc",
 			"aliases": {
-				"testnet": "0x85d301aec51787de"
+				"testnet": "0xf446a5994b73b5f3"
 			}
 		},
 		"TeleportCustody": "./contracts/flow/TeleportCustody.cdc"
@@ -33,7 +33,7 @@
 			"keys": "a3fedbc0837fc67cac491f704508e82e590ac32eaad3ef7ec2cac492f5ce734a"
 		},
 		"icons-teleport-contract-testnet": {
-			"address": "dbbf409d954a92ab",
+			"address": "0x47ca267fdd17ecde",
 			"keys": [
 				{
 					"type": "hex",
@@ -41,22 +41,7 @@
 					"signatureAlgorithm": "ECDSA_secp256k1",
 					"hashAlgorithm": "SHA3_256",
 					"context": {
-						"privateKey": "757e0ed873419dcef9244a4c84ea2da3db4266855f61e98d1b503fd2a7f8fada"
-					}
-				}
-			],
-			"chain": "flow-testnet"
-		},
-		"icons-teleport-admin-testnet": {
-			"address": "3fd8f94084b09274",
-			"keys": [
-				{
-					"type": "hex",
-					"index": 0,
-					"signatureAlgorithm": "ECDSA_secp256k1",
-					"hashAlgorithm": "SHA3_256",
-					"context": {
-						"privateKey": "aad8634fe65cec8915ed77a12c9d14c8cfff08191f8353a4b2b348fcc49e2b40"
+						"privateKey": "936e4a9e32b2fd224d0d6188a904ae05e3eb5c214568ce32e41fe4e3871ad7fc"
 					}
 				}
 			],
