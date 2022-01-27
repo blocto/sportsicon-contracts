@@ -46,6 +46,21 @@
 				}
 			],
 			"chain": "flow-testnet"
+		},
+		"icons-teleport-admin-testnet": {
+			"address": "0x1788383f8fd2e6bc",
+			"keys": [
+				{
+					"type": "hex",
+					"index": 0,
+					"signatureAlgorithm": "ECDSA_secp256k1",
+					"hashAlgorithm": "SHA3_256",
+					"context": {
+						"privateKey": "4c5b67548d726dc599fca9b0ad0a8a8217b0d76ae4403ba649600d46439f9acd"
+					}
+				}
+			],
+			"chain": "flow-testnet"
 		}
 	},
 	"deployments": {
